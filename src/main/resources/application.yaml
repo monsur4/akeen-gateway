@@ -4,13 +4,8 @@ spring:
   application:
     name: akeen-gateway
 
-  cloud:
-    gateway:
-      routes:
-        - id: video-service-route
-          uri: ${VIDEO_SERVICE_URL:http://localhost:8080}
-          predicates:
-            - Path=/api/*/video/**
-          filters:
-            - AddRequestHeader=X-Tenant,mon
-            - AddResponseHeader=X-Genre,thriller
+video:
+  service:
+    id: video-service-route
+    path: /api/*/video/**
+    uri: ${VIDEO_SERVICE_URL:http://localhost:8080}
