@@ -1,0 +1,16 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: akeen-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: video-service-route
+          uri: ${VIDEO_SERVICE_URL:http://localhost:8080}
+          predicates:
+            - Path=/api/*/video/**
+          filters:
+            - AddRequestHeader=X-Tenant,mon
+            - AddResponseHeader=X-Genre,thriller
