@@ -1,6 +1,6 @@
-package com.getrova.baas.bpsm.apigateway.filter;
+package com.mon.akeengateway.filter;
 
-import com.getrova.baas.bpsm.apigateway.validation.TokenValidationService;
+import com.mon.akeengateway.validation.TokenValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
