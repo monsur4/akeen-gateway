@@ -14,6 +14,7 @@ public class TokenValidationServiceImpl implements TokenValidationService {
 
         // TODO: MAKE CALL TO AUTHENTICATION SERVICE
 
+        // create a response stub
         ValidateTokenResponse validateTokenResponse = new ValidateTokenResponse();
         log.info(validateTokenResponse.toString());
 
