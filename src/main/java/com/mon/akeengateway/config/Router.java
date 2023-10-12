@@ -27,7 +27,7 @@ public class Router {
                 .route(videoServiceId,
                         predicateSpec -> predicateSpec
                                 .path(videoServicePath)
-                                .filters(customFilter -> customFilter.filter(tokenValidationFilter.apply(new TokenValidationFilter.Config())))
+                                .filters(customFilter -> customFilter.filter(tokenValidationFilter))
                                 .uri(videoServiceUri)
                 )
                 .build();
