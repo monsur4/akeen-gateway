@@ -8,4 +8,4 @@ video:
   service:
     id: video-service-route
     path: /api/*/video/**
-    uri: ${VIDEO_SERVICE_URL:http://localhost:8080}
+    uri: ${VIDEO_SERVICE_URL:http://localhost:9090}
